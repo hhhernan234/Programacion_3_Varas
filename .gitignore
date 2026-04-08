@@ -1,0 +1,124 @@
+########################################
+# Dependencias
+########################################
+node_modules/
+**/node_modules/
+
+########################################
+# Builds / outputs
+########################################
+dist/
+build/
+.next/
+out/
+coverage/
+**/dist/
+**/build/
+**/.next/
+**/out/
+**/coverage/
+
+########################################
+# Logs
+########################################
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+**/logs/
+
+########################################
+# Archivos de entorno
+########################################
+.env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+
+########################################
+# Cache
+########################################
+.cache/
+.parcel-cache/
+.turbo/
+.eslintcache
+**/.cache/
+**/.parcel-cache/
+**/.turbo/
+
+########################################
+# Sistema operativo
+########################################
+.DS_Store
+Thumbs.db
+
+########################################
+# IDEs y editores
+########################################
+.vscode/
+.idea/
+*.swp
+*.swo
+**/.vscode/
+**/.idea/
+
+########################################
+# Archivos temporales
+########################################
+tmp/
+temp/
+*.tmp
+*.temp
+**/tmp/
+**/temp/
+
+########################################
+# Archivos de testing
+########################################
+coverage/
+.nyc_output/
+**/coverage/
+
+########################################
+# Archivos de configuración específicos
+########################################
+*.local
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+########################################
+# Docker (opcional)
+########################################
+docker-compose.override.yml
+
+########################################
+# Archivos de lock (opcional según estrategia)
+########################################
+# Si usas monorepo con un solo gestor, deja solo uno:
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+########################################
+# Archivos generados por NestJS
+########################################
+**/dist/
+**/node_modules/
+
+########################################
+# Archivos generados por React
+########################################
+**/build/
+**/.eslintcache
+
+########################################
+# Misc
+########################################
+*.tgz
+*.tar.gz
+*.zip
