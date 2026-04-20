@@ -1,0 +1,65 @@
+h3 {
+    color: aqua;
+    font-size: 3rem;
+}
+
+.parrafos {
+    color: rgb(255, 60, 0);
+    font-size: 1rem;
+}
+
+.nomina-card {
+    background-color: rgb(100, 243, 243);
+    border: 1px solid #7308ec88;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.nomina-nombre {
+    font-size: 1.1rem;
+    color: #1a1a2e;
+}
+
+.nomina-valor {
+    font-size: 1.1rem;
+    color: #f00808;
+    font-weight: bold;
+}
+
+#parrafo-id {
+    font-size: 2.3rem;
+    color: #608ac2;
+    font-weight: bold;
+}
+
+* {
+    font-size: 1.2rem;
+    color: #337939;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+.menu > li {
+    color: #f00808;
+}
+
+.navbar a {
+    color: #8b4513; /* Color corregido para visibilidad */
+    text-decoration: none;
+}
+
+h4, h5, h6 {
+    color: #38c7eb;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+button.btn-primario {
+    background-color: #337939;
+    color: #d7e1e4;
+}
+
+button.btn-error {
+    background-color: aqua;
+    color: #38c7eb;
+}

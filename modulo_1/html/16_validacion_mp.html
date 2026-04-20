@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación de Nómina</title>
+</head>
+<body>
+    <h1>Validación de Registros de Nómina</h1>
+    <form action="/procesar_nomina" method="post">
+        
+        <fieldset>
+            <legend>Identificación de Empleado</legend>
+            <label for="codigo_empleado">Código Empleado:</label><br>
+            <input type="text" id="codigo_empleado" name="codigo_empleado" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Validación de Documento (10 dígitos)</legend>
+            <label for="cedula">Cédula:</label><br>
+            <input type="text" id="cedula" name="cedula" minlength="10" maxlength="10" pattern="\d{10}">
+        </fieldset>
+
+        <fieldset>
+            <legend>Código de Centro de Costos</legend>
+            <label for="centro_costos">Formato CC-XXXXX:</label><br>
+            <input type="text" id="centro_costos" name="centro_costos" pattern="CC-[0-9]{5}" title="Formato requerido: CC- seguido de 5 números">
+        </fieldset>
+
+        <fieldset>
+            <legend>Rango Salarial (SBU 2026)</legend>
+            <label for="salario">Salario Mensual:</label><br>
+            <input type="number" id="salario" name="salario" min="460" max="10000" step="0.01">
+        </fieldset>
+
+        <fieldset>
+            <legend>Estado Administrativo</legend>
+            <label for="estatus">Estatus:</label><br>
+            <input type="text" id="estatus" name="estatus" value="ACTIVO" readonly>
+        </fieldset>
+
+        <button type="submit">Validar y Registrar</button>
+        <button type="reset">Limpiar formulario</button>
+    </form>
+</body>
+</html>
