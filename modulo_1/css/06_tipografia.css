@@ -1,29 +1,35 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .precio-producto {
+    background-color: #f9f9f9;
+}
+
+.precio-producto {
     font-family: 'Courier New', Courier, monospace;
-  }
+    font-size: 1.4rem;
+    color: #27ae60;
+}
 
-  /* Fuente de display para títulos de TechStore */
-  .titulos{
+/* Fuente de display para títulos de nómina */
+.titulos {
     font-family: 'Playfair Display', Georgia, serif;
-  }
-  
-  /* Fuente de cuerpo para textos y UI */
-  .internacional{
+    font-size: 2.2rem;
+    color: #34495e;
+}
+
+/* Fuente de cuerpo para textos y UI */
+.internacional {
     font-family: 'Inter', sans-serif;
-    color: cadetblue;
-  }
+    color: #2980b9;
+    font-size: 0.9rem;
+}
 
-  .titulo-seccion   { font-weight: 700; } /* negrita */
-  .precio-producto  { font-weight: 600; } /* semi-negrita */
-  .descripcion      { font-weight: 400; } /* normal */
-  .nota-legal       { font-weight: 300; } /* delgado */
+.titulo-seccion { font-weight: 700; } 
+.precio-producto { font-weight: 600; } 
+.descripcion { font-weight: 400; } 
+.nota-legal { font-weight: 300; font-size: 0.8rem; }
 
-  .precio-original {
+.precio-original {
     font-style: italic;
     text-decoration: line-through;
-    color: #999;
-  }
+    color: #c0392b;
+}
