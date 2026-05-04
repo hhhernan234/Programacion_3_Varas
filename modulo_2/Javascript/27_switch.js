@@ -12,7 +12,7 @@ switch (estadoPedido) {
     break;
   case "entregado":
     console.log("📦 Pedido entregado. ¡Gracias por tu compra!");
-    break;
+    break;  
   case "cancelado":
     console.log("❌ Pedido cancelado. Reembolso procesado en 5-7 días.");
     break;
