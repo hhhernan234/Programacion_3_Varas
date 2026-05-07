@@ -198,3 +198,10 @@ const anidado = [[1, 2], [3, 4], [5, 6]];
 const plano   = anidado.reduce((acum, arr) => [...acum, ...arr], []);
 console.log(plano);   // [1, 2, 3, 4, 5, 6]
 // alternativa moderna: anidado.flat()
+
+
+const celsius = [0, 15, -5, 22, 37, 100, -10, 28];
+
+const grados = celsius.filter(n => n >= 0 && n<=30 )
+const farenheit = grados.map(n => (n*9/5)+32)
+console.log(farenheit);
