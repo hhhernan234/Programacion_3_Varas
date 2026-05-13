@@ -1,26 +1,50 @@
 .productos-grid {
     display: flex; /* activa Flexbox */
+    flex-direction:row;
+    justify-content: flex-start
   }
   .contenedor {
-    display: flex;
-    flex-direction: row;            /* → izquierda a derecha (defecto) */
-    flex-direction: row-reverse;    /* ← derecha a izquierda */
-    flex-direction: column;         /* ↓ arriba a abajo */
-    flex-direction: column-reverse; /* ↑ abajo a arriba */
+    display: flex;            /* → izquierda a derecha (defecto) */
+    flex-direction: row;    /* ← derecha a izquierda */
+    justify-content: center;
   }
-  
   /* Navbar: items en fila */
   .navbar {
     display: flex;
     flex-direction: row;
+    justify-content: flex-end;
   }
   
-  /* Tarjeta: imagen, nombre, precio y botón en columna */
+    /* 1. Todo al centro: Ideal para banners principales */
+  .ejemplo-centro {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
+  /* 2. Espacio en medio: El primero a la izquierda, el último a la derecha */
+  /* Muy usado en Headers (Logo a un lado, Menú al otro) */
+  .ejemplo-between {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+  }
+
+  /* 3. Espacio equitativo: Todo el espacio se reparte igual, incluso en las orillas */
+  /* Es el que mejor se ve para una lista de productos */
+  .ejemplo-evenly {
+      display: flex;
+      justify-content: space-evenly;
+      flex-direction: row;
+  }
+  
+    /* Tarjeta: imagen, nombre, precio y botón en columna */
   .producto-card {
     display: flex;
-    flex-direction: column;
+    border: 1px solid rebeccapurple;
   }
-  
+
+
   .contenedor-justify {
     display: flex;
     justify-content: flex-start;    /* agrupados al inicio (defecto) */
@@ -30,3 +54,5 @@
     justify-content: space-around;  /* espacio alrededor de cada item */
     justify-content: space-evenly;  /* espacio igual entre todos */
   }
+
+  

@@ -74,7 +74,7 @@
   
   /* Imagen con overlay */
   .imagen {
-    background-image: url("https://via.placeholder.com/400x200");
+    background-image: url("https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1470&auto=format&fit=crop");
     background-size: cover;
     height: 200px;
     margin-top: 1rem;
