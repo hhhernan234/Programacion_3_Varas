@@ -46,4 +46,34 @@ export class AppService {
     return this.productos!
         .find(producto => producto.id === Number(id))!;
   }
+
+  update(id: string, updateProductoDto: ProductoDto): any {
+    const producto:ProductoDto = this.productos!
+        .find(producto => producto.id === Number(id))!;
+    if(!producto) {
+      return;
+}
+    Object.assign(producto, updateProductoDto)
+    return producto;
+  }
+
+  delete(id: string): any {
+    const index = this.productos!
+        .findIndex(producto => producto.id === Number(id))!;
+    if(index === -1) {
+      return;
+    }
+    const deletedProducto = this.productos[index];
+    this.productos.splice(index, 1);
+    return deletedProducto;
+  }    
+
+  areaTriangulo(data: any): any {
+    const area = (data.base * data.altura) / 2;
+    return {
+    "base": data.base,
+    "altura": data.altura,
+    "areaTriangulo": area,
+    };
+  }
 }
