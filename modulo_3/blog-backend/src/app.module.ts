@@ -21,7 +21,7 @@ import { MailModule } from './mail/mail.module';
       database: process.env.DB_NAME,
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
-      ssl: { rejectUnauthorized: false },
+      ssl: false ,
     }),
     AuthModule,
     UsersModule,
