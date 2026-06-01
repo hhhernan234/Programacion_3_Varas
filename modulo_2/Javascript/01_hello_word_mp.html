@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Sistema Varas — Inicio JavaScript</title>
+</head>
+<body>
+    <h1 style="color: #e63946">MÓDULO DE INTERACCIÓN - NÓMINA</h1>
+
+    <!-- El JS vive dentro del atributo onclick para acciones rápidas -->
+    <button onclick="alert('Sistema Varas: Generando reporte de asistencia...')">Procesar Asistencia</button>
+
+    <br/>
+    <h1 id="titulo">Estado del Servidor</h1>
+    <br/>
+    <h1 id="titulo2">Sincronizando base de datos...</h1>
+
+    <!-- Script interno para manipulación inmediata del DOM -->
+    <script>
+        const titulo = document.getElementById("titulo");
+        titulo.textContent = "¡Bienvenido al Panel de Control de Nómina!";
+        console.log("Script interno de nómina ejecutado");
+        console.log("Acceso concedido al usuario administrador");
+    </script>
+
+    <!-- Script externo para lógica de negocio pesada -->
+    <script src="01_hello_word_mp.js" defer></script>
+</body>
+</html>

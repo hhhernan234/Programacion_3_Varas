@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tablas de Control de Nómina</title>
+</head>
+<body>
+
+    <h1>1. Nómina Básica del Personal</h1>
+    <table border="1">
+        <tr>
+            <th>Empleado</th>
+            <th>Cargo</th>
+            <th>Salario Base</th>
+        </tr>
+        <tr>
+            <td>Hernan Varas</td>
+            <td>Desarrollador Backend</td>
+            <td>1200$</td>
+        </tr>
+        <tr>
+            <td>Roberto Rocha</td>
+            <td>Analista de Datos</td>
+            <td>1150$</td>
+        </tr>
+    </table>
+
+    <h1>2. Resumen Mensual de Pagos</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Concepto</th>
+                <th>Monto</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Sueldo Mensual</td>
+                <td>1200$</td>
+                <td>Pagado</td>
+            </tr>
+            <tr>
+                <td>Bonificación</td>
+                <td>150$</td>
+                <td>Pendiente</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td><strong>Total Neto</strong></td>
+                <td><strong>1350$</strong></td>
+                <td>-</td>
+            </tr>
+        </tfoot>
+    </table>
+
+    <h1>3. Reporte de Asistencia (Uso de Scope)</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th scope="col">Departamento</th>
+                <th scope="col">Días Laborados</th>
+                <th scope="col">Horas Extras</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">Desarrollo</th>
+                <td>22</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <th scope="row">Infraestructura</th>
+                <td>20</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>4. Matriz de Liquidaciones (Combinación de celdas)</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th rowspan="2">Empleado</th>
+                <th colspan="2">Deducciones</th>
+                <th rowspan="2">Total a Recibir</th>
+            </tr>
+            <tr>
+                <th>IESS</th>
+                <th>Impuesto Renta</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Hernan Varas</td>
+                <td>114$</td>
+                <td>50$</td>
+                <td>1036$</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h1>5. Planificación de Pagos (Colgroup)</h1>
+    <table border="1">
+        <colgroup>
+            <col style="background-color:antiquewhite">
+            <col style="background-color:aquamarine">
+            <col style="background-color:bisque">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>Fecha Pago</th>
+                <th>Proceso</th>
+                <th>Responsable</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>15 Abril</td>
+                <td>Anticipo Quincena</td>
+                <td>RRHH</td>
+            </tr>
+            <tr>
+                <td>30 Abril</td>
+                <td>Cierre de Nómina</td>
+                <td>Finanzas</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

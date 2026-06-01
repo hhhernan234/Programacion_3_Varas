@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Empleado - Nómina</title>
+</head>
+<body>
+    <h1>Formulario de Registro de Empleado</h1>
+    <form action="/procesar_registro" method="post">
+        <table>
+            <tr>
+                <td>
+                    <label for="nombre">Nombre Completo</label><br>
+                    <input type="text" id="nombre" name="nombre" required>
+                </td>
+                <td>
+                    <label for="email">Correo Electrónico</label><br>
+                    <input type="email" id="email" name="email" required>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <label for="salario">Salario Base ($)</label><br>
+                    <input type="number" id="salario" name="salario" min="460" step="10">
+                </td>
+                <td>
+                    <label for="fecha_ingreso">Fecha de Ingreso</label><br>
+                    <input type="date" id="fecha_ingreso" name="fecha_ingreso">
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <label for="departamento">Departamento:</label><br>
+                    <select id="departamento" name="departamento" required>
+                        <option value="">--Seleccione--</option>
+                        <option value="desarrollo">Desarrollo Backend</option>
+                        <option value="infra">Infraestructura</option>
+                        <option value="rrhh">Recursos Humanos</option>
+                    </select>
+                </td>
+                <td>
+                    <label for="habilidades">Tecnologías (Ctrl+Click):</label><br>
+                    <select id="habilidades" name="habilidades[]" multiple size="3">
+                        <option value="python">Python/Django</option>
+                        <option value="sql">PostgreSQL/MySQL</option>
+                        <option value="mqtt">Protocolo MQTT</option>
+                    </select>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <fieldset>
+                        <legend>Tipo de Contrato</legend>
+                        <input type="radio" id="fijo" name="contrato" value="fijo" checked>
+                        <label for="fijo">Indefinido</label>
+                        <input type="radio" id="temporal" name="contrato" value="temporal">
+                        <label for="temporal">Temporal</label>
+                    </fieldset>
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2">
+                    <label for="observaciones">Observaciones de Nómina</label><br>
+                    <textarea id="observaciones" name="observaciones" rows="4" cols="50" placeholder="Ej. Anticipo solicitado..."></textarea>
+                </td>
+            </tr>
+        </table>
+
+        <br>
+        <button type="submit">Guardar Registro</button> 
+        <button type="reset">Limpiar Formulario</button> 
+    </form>
+</body>
+</html>

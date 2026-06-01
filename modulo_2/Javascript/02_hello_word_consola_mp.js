@@ -1,0 +1,1 @@
+console.log("Hola bienvenido al sistema de control de nóminas");

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Soporte — Sistema Varas</title>
+</head>
+<body>
+
+  <header>
+    <a href="index_mp.html"><strong>Sistema Varas</strong></a>
+  </header>
+
+  <nav aria-label="Navegación principal">
+    <ul>
+      <li><a href="index_mp.html">Inicio</a></li>
+      <li><a href="cursos_mp.html">Módulos</a></li>
+      <li><a href="contacto_mp.html">Soporte</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <h1>Centro de Soporte Técnico</h1>
+
+    <section>
+      <h2>Formulario de contacto</h2>
+      <form action="/enviar" method="post">
+        <fieldset>
+          <legend>Datos personales</legend>
+          <label for="nombre">Nombre y apellidos:</label>
+          <input type="text" id="nombre" name="nombre" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Consulta técnica</legend>
+          <label for="asunto">Asunto:</label>
+          <select id="asunto" name="asunto">
+            <optgroup label="Sistemas">
+              <option value="nomina">Nómina</option>
+              <option value="iot">IoT</option>
+            </optgroup>
+          </select>
+          <br>
+          <label for="mensaje">Mensaje:</label>
+          <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar</button>
+      </form>
+    </section>
+
+    <section>
+      <h2>Información directa</h2>
+      <address>
+        <strong>Soporte Técnico</strong><br>
+        Campus Tecnológico, Quito
+      </address>
+    </section>
+  </main>
+
+  <footer>
+    <p><small>&copy; 2026 Sistema Varas.</small></p>
+  </footer>
+
+</body>
+</html>

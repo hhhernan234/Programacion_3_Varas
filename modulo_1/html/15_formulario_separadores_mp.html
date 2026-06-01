@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Administrativo - Nómina</title>
+</head>
+<body>
+    <h1>Sistema de Registro de Personal</h1>
+    <form action="/procesar_nomina" method="post">
+        
+        <fieldset>
+            <legend>Información de Identificación</legend>
+            <label for="nombre">Nombre Completo:</label><br>
+            <input type="text" id="nombre" name="nombre" placeholder="Juan Pérez" required><br>
+            
+            <label for="cedula">Cédula / Identificación:</label><br>
+            <input type="text" id="cedula" name="cedula" placeholder="17xxxxxxxx" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Credenciales de Acceso al Sistema</legend>
+            <label for="email">Correo Institucional:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            
+            <label for="password">Contraseña Temporal:</label><br>
+            <input type="password" id="password" name="password" minlength="8" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>Configuración de Pago</legend>
+            <label for="cuenta">Número de Cuenta Bancaria:</label><br>
+            <input type="text" id="cuenta" name="cuenta" pattern="\d{10,20}" title="Debe contener entre 10 y 20 dígitos">
+            <br>
+            <label for="banco">Entidad Bancaria:</label><br>
+            <select id="banco" name="banco">
+                <option value="pichincha">Banco Pichincha</option>
+                <option value="guayaquil">Banco Guayaquil</option>
+                <option value="pacifico">Banco del Pacífico</option>
+            </select>
+        </fieldset>
+
+        <br>
+        <button type="submit">Registrar Empleado</button>
+        <button type="reset">Reiniciar Formulario</button>
+    </form>
+</body>
+</html>

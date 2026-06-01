@@ -1,0 +1,120 @@
+/* Variables de Identidad Corporativa */
+:root {
+    --color-primario: #2980b9; /* Azul profesional */
+    --color-secundario: #34495e;
+}
+
+.producto-card {
+    border: 1px solid #bdc3c7;   /* px: ideal para bordes finos de tablas */
+    border-radius: 8px;
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.producto-card2 .producto-nombre {
+    font-size: 1.5em; /* Escala relativa basada en el padre */
+    padding: 0.7em;
+    font-weight: bold;
+    color: var(--color-secundario);
+}
+
+/* HEADER */
+.header {
+    background: var(--color-secundario);
+    color: white;
+    padding: 1rem;
+}
+
+#toggle-menu {
+    display: none;
+}
+
+.btn-menu {
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* MENÚ (Lógica CSS puro) */
+.menu-movil {
+    display: none;
+    background: color-mix(in srgb, var(--color-primario) 90%, white);
+    padding: 1rem;
+}
+
+#toggle-menu:checked ~ .menu-movil {
+    display: block;
+}
+
+/* BOTONES CON MEZCLA DE COLOR */
+button {
+    padding: 0.8rem 1.5rem;
+    margin: 0.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: 600;
+}
+
+.btn-primario-suave {
+    /* Mezcla el azul con blanco para un fondo sutil */
+    background-color: color-mix(in srgb, var(--color-primario) 15%, white);
+    color: var(--color-primario);
+}
+
+.btn-primario-oscuro {
+    /* Mezcla el azul con negro para un estado de énfasis */
+    background-color: color-mix(in srgb, var(--color-primario) 85%, black);
+    color: white;
+}
+
+.gradiente-solido {
+    /* Mezcla de dos colores de marca al 50% */
+    background-color: color-mix(in srgb, var(--color-primario) 50%, var(--color-secundario) 50%);
+    color: white;
+}
+
+/* Caja ejemplo */
+.caja {
+    padding: 1.5rem;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Imagen con overlay dinámico */
+.imagen {
+    background-image: url("https://images.unsplash.com/photo-1454165833767-027ffea9e77b?auto=format&fit=crop&q=80&w=400");
+    background-size: cover;
+    height: 250px;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.imagen-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    /* Overlay usando mezcla de color oscuro y transparencia */
+    background-color: color-mix(in srgb, var(--color-secundario) 75%, transparent);
+}
+
+/* Hero y Secciones con medidas VH/VW */
+.hero-banner {
+    height: 40vh; /* Ajustado para que no ocupe toda la pantalla en un admin */
+    width: 100%;
+    background-color: #ecf0f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-destacados {
+    min-height: 30vh;
+    padding: 2rem;
+    background-color: white;
+}

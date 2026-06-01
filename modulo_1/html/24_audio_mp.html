@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursos Auditivos - Sistema de Nómina</title>
+</head>
+<body>
+
+    <main>
+        <article>
+            <header>
+                <h1>Biblioteca de Audio: Guías y Notificaciones</h1>
+            </header>
+
+            <section aria-label="Audio simple">
+                <h2>Guía rápida de bienvenida</h2>
+                <audio src="audio/audio.mp3" controls></audio>
+            </section>
+
+            <section aria-label="Compatibilidad de formatos">
+                <h2>Recursos de soporte técnico</h2>
+                <p>Reproductor con soporte multiformato para asegurar compatibilidad:</p>
+                <audio controls preload="metadata">
+                    <source src="audio/ogg.ogg" type="audio/ogg">
+                    <source src="audio/wav.wav" type="audio/wav">
+                    <source src="audio/audio1.mp3" type="audio/mp3">
+                    Tu navegador no soporta los controles de audio integrados.
+                </audio>
+            </section>
+
+            <section aria-label="Alertas del sistema">
+                <h2>Alerta automática (Loop)</h2>
+                <p>Notificación de sistema con reproducción continua:</p>
+                <audio src="audio/audio.mp3" autoplay controls loop></audio>
+            </section>
+        </article>
+    </main>
+
+</body>
+</html>

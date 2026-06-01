@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Nóminas 2026 — Dashboard</title>
+    <meta name="description" content="Dashboard profesional para la gestión de nóminas, empleados y reportes financieros en 2026.">
+    <meta name="author" content="Hernan Varas">
+</head>
+<body>
+
+    <header>
+        <a href="/dashboard">
+            <img src="imagenes/logo-nomina.svg" alt="Sistema de Nómina — Inicio" width="150">
+        </a>
+        <p>Control interno de personal y pagos</p>
+    </header>
+
+    <nav aria-label="Navegación administrativa">
+        <ul>
+            <li><a href="/dashboard">Dashboard</a></li>
+            <li><a href="/empleados">Empleados</a></li>
+            <li><a href="/nominas">Nómina</a></li>
+            <li><a href="/reportes">Reportes</a></li>
+        </ul>
+    </nav>
+
+    <nav aria-label="Ruta de navegación">
+        <ol>
+            <li><a href="/dashboard">Inicio</a></li>
+            <li><a href="/nominas">Nómina</a></li>
+            <li>Gestión mensual 2026</li>
+        </ol>
+    </nav>
+
+    <main>
+
+        <article>
+            <header>
+                <h1>Gestión de Nómina: Abril 2026</h1>
+                <p>
+                    Procesado por <strong>Hernan Varas</strong> —
+                    <time datetime="2026-04-18">18 de abril de 2026</time> —
+                    Estado: <em>En revisión</em>
+                </p>
+            </header>
+
+            <section>
+                <h2>Resumen Ejecutivo</h2>
+                <p>
+                    El sistema ha consolidado los pagos del mes. Se han verificado las horas extras 
+                    del proyecto MQTT y las novedades del personal administrativo.
+                </p>
+            </section>
+
+            <section>
+                <h2>Módulos de Gestión</h2>
+                <ul>
+                    <li>Cálculo de sueldos y salarios</li>
+                    <li>Registro de novedades IESS</li>
+                    <li>Generación de roles de pago</li>
+                    <li>Exportación de reportes PDF</li>
+                    <li>Validación de datos bancarios</li>
+                </ul>
+
+                <details>
+                    <summary>Ver configuración técnica del sistema</summary>
+                    <p>El sistema utiliza una arquitectura basada en Django con base de datos PostgreSQL, asegurando la integridad de los datos de los colaboradores y el cálculo automatizado de retenciones.</p>
+                </details>
+            </section>
+
+            <section>
+                <h2>Acciones Administrativas</h2>
+                <p>Pasos para finalizar el proceso:</p>
+                <ol>
+                    <li><strong>Validar horas extras</strong> — Confirmar horas registradas en el sistema.</li>
+                    <li><strong>Generar cierre</strong> — Cerrar el periodo contable de abril.</li>
+                </ol>
+
+                <aside>
+                    <p><strong>Recordatorio:</strong> Verifica que la cédula del empleado tenga exactamente 10 dígitos antes de proceder con el pago masivo.</p>
+                </aside>
+            </section>
+
+            <footer>
+                <p>Categorías de reporte: 
+                    <a href="/reportes/financieros">Financieros</a>, 
+                    <a href="/reportes/rrhh">Recursos Humanos</a>
+                </p>
+            </footer>
+        </article>
+
+        <section aria-label="Notas administrativas">
+            <h2>Notas de Revisión (2)</h2>
+
+            <article>
+                <header>
+                    <strong>Roberto Rocha</strong> —
+                    <time datetime="2026-04-17">17 abr 2026</time>
+                </header>
+                <p>Se han completado las validaciones de los registros de desarrollo.</p>
+            </article>
+
+            <article>
+                <header>
+                    <strong>Christian Cañar</strong> —
+                    <time datetime="2026-04-18">18 abr 2026</time>
+                </header>
+                <p>Pendiente el reporte de bonos por productividad.</p>
+            </article>
+        </section>
+
+    </main>
+
+    <aside aria-label="Panel lateral de herramientas">
+        <section>
+            <h2>Enlaces Rápidos</h2>
+            <ul>
+                <li><a href="/soporte">Soporte Técnico</a></li>
+                <li><a href="/manual">Manual del Usuario</a></li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Notificación de Sistema</h2>
+            <form action="/alertas" method="post">
+                <label for="email-alerta">Email de contacto:</label>
+                <input type="email" id="email-alerta" name="email" placeholder="admin@empresa.com" required>
+                <button type="submit">Suscribir alertas</button>
+            </form>
+        </section>
+    </aside>
+
+    <footer>
+        <nav aria-label="Footer">
+            <ul>
+                <li><a href="/terminos">Términos</a></li>
+                <li><a href="/ayuda">Ayuda</a></li>
+            </ul>
+        </nav>
+        <p><small>&copy; 2026 Sistema de Gestión de Nómina. Todos los derechos reservados.</small></p>
+    </footer>
+
+</body>
+</html>
