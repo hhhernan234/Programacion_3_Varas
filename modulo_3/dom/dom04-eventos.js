@@ -17,7 +17,7 @@ document.getElementById('btn3').addEventListener("click", function(){
 })
 
 function cambiarTexto(){
-    const parrafo = document.getElementById('parrafo');
+    const parrafo = document.getElementById('parrafo1');
     parrafo.textContent = "Nuevo Parrafo";
 }
 
@@ -25,3 +25,18 @@ function cambiarContenido(){
     const contenido = document.getElementById('contenido');
     contenido.textContent = "Nuevo Parrafo";
 }
+
+document.getElementById('campo')
+    .addEventListener('input', () => {
+    console.log('Valor del campo: ',
+        document.getElementById('campo').value);
+    });
+
+document.getElementById('campo_actualizar_parrafo')
+    .addEventListener('input', () => {
+    const valorCampo =document
+        .getElementById('campo_actualizar_parrafo').value;
+    document.getElementById('parrafo')
+        .textContent =
+        `Valor actualizado: ${valorCampo}`;
+    });
