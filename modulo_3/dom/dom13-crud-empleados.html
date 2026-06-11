@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Registro de Empleados</title>
+    <script src="dom12-crud-productos.js" defer></script>
+</head>
+<body>
+    <h2>Registro de Empleados</h2>
+    
+    <div>
+        <input type="text" id="nombre" placeholder="Nombre">
+        <input type="text" id="apellido" placeholder="Apellido">
+        <input type="number" id="sueldo" placeholder="Sueldo">
+        <button id="btnAgregar">Agregar</button>
+    </div>
+
+    <h3>Empleados Registrados</h3>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Sueldo</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla"></tbody>
+    </table>
+
+    <h3>Promedio de sueldos: <span id="promedio">0</span></h3>
+
+    <script src="app.js"></script>
+</body>
+</html>

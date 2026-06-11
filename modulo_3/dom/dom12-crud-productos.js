@@ -31,6 +31,7 @@ function renderProductos() {
             <td>$${producto.precio.toFixed(2)}</td>
             <td>
                 <button onclick="editarProducto(${producto.id})">Editar</button>
+                <button onclick="eliminarProducto(${producto.id})">Eliminar</button>
             </td>
         `;
         cuerpoTabla.appendChild(productoElement);
@@ -56,6 +57,7 @@ function agregarProducto() {
 
     productos.push(nuevoProducto);
     renderProductos();
+    actualizarEstadisticas();
     limpiarFormulario();
 }
 
@@ -108,6 +110,7 @@ function actualizarProducto() {
             precio: parseFloat(precioInput)
         };
         renderProductos();
+        actualizarEstadisticas();
         limpiarFormulario();
         agregarBtn.textContent = 'Agregar Producto';
         agregarBtn.removeEventListener('click', actualizarProducto);
@@ -127,7 +130,42 @@ function cancelarEdicion() {
 const cancelarBtn = document.getElementById('btn-cancelar');
 cancelarBtn.addEventListener('click', cancelarEdicion);
 
+function eliminarProducto(id) {
+    const index = productos.findIndex(p => p.id === id);
+    if (index !== -1) {
+        if (confirm('¿Está seguro de eliminar este producto?')) {
+            productos.splice(index, 1);
+            renderProductos();
+            actualizarEstadisticas();
+        }
+    }
+}
+
+function actualizarEstadisticas() {
+    const totalProductos = productos.length;
+    const precioPromedio = totalProductos > 0 ? 
+        (productos
+            .reduce((sum, p) => sum + p.precio, 0) / totalProductos).toFixed(2) 
+        : 0;
+    
+    document.getElementById('totalProductos')
+        .textContent = totalProductos;
+    document.getElementById('precioPromedio')
+        .textContent = precioPromedio;
+    
+    const productoMasCaro = productos.length > 0 ? 
+        Math.max(...productos.map(p => p.precio)) : 0;
+    const productoMasBarato = productos.length > 0 ? 
+        Math.min(...productos.map(p => p.precio)) : 0;
+    
+    document.getElementById('productoMasCaro')
+        .textContent = productoMasCaro;
+    document.getElementById('productoMasBarato')
+        .textContent = productoMasBarato;
+}
+
 window.onload = function() {
     renderProductos();
+    actualizarEstadisticas();
 };
 
