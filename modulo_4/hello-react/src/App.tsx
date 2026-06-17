@@ -1,37 +1,36 @@
-import ProductCard        from './components/ProductCard'
+import MascotaCatalogList from "./components/ProductMascotasList"
 
-interface Product {
+interface Mascotas {
+  outOfStock: boolean
   id: number
-  name: string
-  price: number
-  outOfStock?: boolean
+  nombre: string
+  tipo: string
+  edad?: number
+  precio: number
 }
 
-const catalog: Product[] = [
-  { id: 1, name: 'Teclado mecánico',  price: 89.99 },
-  { id: 2, name: 'Monitor 27"',       price: 349.99 },
-  { id: 3, name: 'Mouse inalámbrico', price: 29.99, outOfStock: true },
-  { id: 4, name: 'Webcam HD',         price: 59.99 },
+const catalog: Mascotas[] = [
+  {
+    id: 1, nombre: 'CHIGUAGAUA', precio: 89.99, tipo: 'Perros',
+    outOfStock: false
+  },
+  {
+    id: 2, nombre: 'Monitor 27"', precio: 349.99, tipo: 'Periféricos',
+    outOfStock: false
+  },
+  { id: 3, nombre: 'Mouse inalámbrico', precio: 29.99, outOfStock: true, tipo: 'Periféricos' },
+  { id: 4, nombre: 'Webcam HD',         precio: 59.99, tipo: 'Periféricos', outOfStock: false },
+  { id: 5, nombre: 'Hub USB-C', precio: 39.99, tipo: 'Periféricos', outOfStock: false },
 ]
 
-export default function App() {
+export default function MascotaCatalog() {
   return (
     <main style={{ maxWidth: 540, margin: '40px auto', fontFamily: 'sans-serif' }}>
 
-      <ProductCard
-        title="Bienvenido a la tienda"
-        description="Encuentra los mejores accesorios para tu escritorio"
-        price={0}
-      />
 
-      <ProductCard title="Oferta del día" 
-      description="Webcam HD con 20% de descuento" />
-      
-      <ProductCard
-        title="laptop gamer"
-        description=""
-        price={1000}
-      />
+      <MascotaCatalogList 
+      mascotas={catalog} 
+      title="Catálogo de Mascotas" />
 
     </main>
   )
