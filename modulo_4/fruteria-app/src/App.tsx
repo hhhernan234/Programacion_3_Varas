@@ -3,17 +3,17 @@
 import WelcomeBanner       from './components/WelcomeBanner'
 import UserGreeting        from './components/UserGreeting'
 import CurrentDateDisplay  from './components/CurrentDateDisplay'
-/*import ColoredBox          from './components/ColoredBox'
+import ColoredBox          from './components/ColoredBox'
 import ConditionalGreeting from './components/ConditionalGreeting'
 import FruitList           from './components/FruitList'
 import PriceTag            from './components/PriceTag'
 import StatusBadge         from './components/StatusBadge'
 import MiniProfileCard     from './components/MiniProfileCard'
 import SimpleInfoTable     from './components/SimpleInfoTable'
-import ProductCard         from './components/ProductCard'
+/*import ProductCard         from './components/ProductCard'
 import ProductCatalogList  from './components/ProductCatalogList'
-import UserProfileCard     from './components/UserProfileCard'
-*/
+import UserProfileCard     from './components/UserProfileCard'*/
+
 // ┌──────────────────────────────────────────────────────────────────────────┐
 // │  Cambia PASO y guarda (Ctrl+S) para navegar entre componentes.          │
 // │   1  WelcomeBanner       — banner estático sin props                    │
@@ -30,7 +30,7 @@ import UserProfileCard     from './components/UserProfileCard'
 // │  12  ProductCatalogList  — lista con renderizado condicional de items   │
 // │  13  UserProfileCard     — ejercicio: props complejas + rol             │
 // └──────────────────────────────────────────────────────────────────────────┘
-const PASO = 3
+const PASO = 2
 
 const fruits = [
   { name: 'Manzana', emoji: '🍎', calories: 52 },
@@ -50,7 +50,7 @@ export default function App() {
     PASO ===  1 ? <WelcomeBanner subtitle="Programadores estrellas" /> :
     PASO ===  2 ? <><UserGreeting name="Ana García" occupation="Desarrolladora Frontend" /></> :
     PASO ===  3 ? <CurrentDateDisplay /> :
-    /*PASO ===  4 ? (
+    PASO ===  4 ? (
       <div style={{ display: 'flex', gap: 12 }}>
         <ColoredBox color="#0070f3" label="Primary" />
         <ColoredBox color="#22c55e" label="Success" />
@@ -92,7 +92,7 @@ export default function App() {
         ]}
       />
     ) :
-    PASO === 11 ? <ProductCard title="Teclado inalámbrico" description="Bluetooth 5.0, retroiluminado" highlighted /> :
+    /*PASO === 11 ? <ProductCard title="Teclado inalámbrico" description="Bluetooth 5.0, retroiluminado" highlighted /> :
     PASO === 12 ? <ProductCatalogList products={catalog} title="Productos disponibles" /> :
     PASO === 13 ? (
       <UserProfileCard
@@ -103,8 +103,8 @@ export default function App() {
         skills={['TypeScript', 'React', 'Node.js']}
         bio="Desarrolladora fullstack con 5 años de experiencia."
       />
-    ) :
-   */ <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>
+    ) :*/
+    <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>
 
   return (
     <main style={{ maxWidth: 540, margin: '40px auto', fontFamily: 'sans-serif', padding: '0 16px' }}>

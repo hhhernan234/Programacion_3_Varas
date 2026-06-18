@@ -1,11 +1,11 @@
-// src/components/ProductCatalogList.tsx
+// src/components/MascotasList.tsx
 
 interface Mascotas {
-  outOfStock: any
+  outOfStock: boolean
   id: number
   nombre: string
   tipo: string
-  edad?: boolean
+  edad?: number
   precio: number
 }
 
@@ -45,9 +45,7 @@ export default function MascotaCatalogList({
                   Agotado
                 </em>
               )}
-              <em>
-                {mascota.tipo}
-              </em>
+              <em>{mascota.tipo}</em><br></br>
             </span>
             <strong>${mascota.precio.toFixed(2)}</strong>
           </li>
