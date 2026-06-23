@@ -18,12 +18,17 @@ export class UsersService {
   ) {}
 
   async create(createUserDto: CreateUserDto) {
-    const hashedPassword = await bcrypt.hash(createUserDto!.password!, 10);
-    const user = this.userRepository.create({
-      ...createUserDto,
-      password: hashedPassword,
-    });
-    return this.userRepository.save(user);
+    try {
+      const hashedPassword = await bcrypt.hash(createUserDto!.password!, 10);
+      const user = this.userRepository.create({
+        ...createUserDto,
+        password: hashedPassword,
+      });
+      return await this.userRepository.save(user);
+    } catch (err) {
+      console.error('Error creating user:', err);
+      return null;
+    }
   }
 
   async findAll(
@@ -108,9 +113,9 @@ export class UsersService {
   }
 
   async updateProfile(id: string, profile: string) {
-  const user = await this.userRepository.findOne({ where: { id: id } });
-  if (!user) throw new NotFoundException('User not found');
-  user.profile = profile;
-  return this.userRepository.save(user);
-}
+    const user = await this.userRepository.findOne({ where: { id: id } });
+    if (!user) throw new NotFoundException('User not found');
+    user.profile = profile;
+    return this.userRepository.save(user);
+  }
 }

@@ -2,11 +2,9 @@ import { Controller, Get, Post, Put, Delete, Body, Param, UseGuards, Query, NotF
 import { UsersService } from './users.service';
 import { CreateUserDto } from './dto/create-user.dto';
 import { UpdateUserDto } from './dto/update-user.dto';
-import { JwtAuthGuard } from 'src/auth/guards/jwt-auth.guard';
-import { Pagination } from 'nestjs-typeorm-paginate';
-import { User } from './user.entity';
-import { SuccessResponseDto } from 'src/common/dto/response.dto';
-import { QueryDto } from 'src/common/dto/query.dto';
+import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
+import { QueryDto } from '../common/dto/query.dto';
+import { SuccessResponseDto } from '../common/dto/response.dto';
 import { FileInterceptor } from '@nestjs/platform-express';
 import { diskStorage } from 'multer';
 
@@ -27,15 +25,14 @@ export class UsersController {
     return new SuccessResponseDto('Users retrieved successfully', result);
   }
 
-
   @Get(':id')
   async findOne(@Param('id') id: string) {
     const user = await this.usersService.findOne(id);
     if (!user) throw new NotFoundException('User not found');
     return new SuccessResponseDto('User retrieved successfully', user);
   }
-  @Put(':id')
 
+  @Put(':id')
   async update(@Param('id') id: string, @Body() dto: UpdateUserDto) {
     const user = await this.usersService.update(id, dto);
     if (!user) throw new NotFoundException('User not found');
@@ -43,11 +40,10 @@ export class UsersController {
   }
 
   @Delete(':id')
-  @UseGuards(JwtAuthGuard)
   async remove(@Param('id') id: string) {
     const user = await this.usersService.remove(id);
     if (!user) throw new NotFoundException('User not found');
-    return new SuccessResponseDto('User deleted successfully', user);
+    return new SuccessResponseDto('Category deleted successfully', user);
   }
 
   @Put(':id/profile')
