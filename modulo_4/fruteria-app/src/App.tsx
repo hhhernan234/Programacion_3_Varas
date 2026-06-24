@@ -10,12 +10,9 @@ import PriceTag            from './components/PriceTag'
 import StatusBadge         from './components/StatusBadge'
 import MiniProfileCard     from './components/MiniProfileCard'
 import SimpleInfoTable     from './components/SimpleInfoTable'
-import DigitalCounter from './components/DigitalCounter'
-import UserProfileForm from './components/UserProfileForm'
-/*import ProductCard         from './components/ProductCard'
-import ProductCatalogList  from './components/ProductCatalogList'
-import UserProfileCard     from './components/UserProfileCard'*/
-
+// import ProductCard         from './components/ProductCard'
+// import ProductCatalogList  from './components/ProductCatalogList'
+// import UserProfileCard     from './components/UserProfileCard'
 // ┌──────────────────────────────────────────────────────────────────────────┐
 // │  Cambia PASO y guarda (Ctrl+S) para navegar entre componentes.          │
 // │   1  WelcomeBanner       — banner estático sin props                    │
@@ -32,7 +29,7 @@ import UserProfileCard     from './components/UserProfileCard'*/
 // │  12  ProductCatalogList  — lista con renderizado condicional de items   │
 // │  13  UserProfileCard     — ejercicio: props complejas + rol             │
 // └──────────────────────────────────────────────────────────────────────────┘
-const PASO = 12
+const PASO = 1
 
 const fruits = [
   { name: 'Manzana', emoji: '🍎', calories: 52 },
@@ -119,21 +116,7 @@ export default function App() {
           { label: 'Total',     value: '$94.99', highlight: true },
         ]}
       />
-    ) :
-
-    PASO === 11 ? (
-      <DigitalCounter
-      label="Contador de clicks"
-      step={1}
-      />
-    ) :
-
-    PASO === 12 ? (
-      <UserProfileForm
-      />
-    ):
-
-    
+    ) : null
 
   return (
     <main style={{ maxWidth: 540, margin: '40px auto', fontFamily: 'sans-serif', padding: '0 16px' }}>
