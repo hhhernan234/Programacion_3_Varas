@@ -10,7 +10,7 @@ import RegistrationForm from './components/RegistrationForm'
 // │  2  RegistrationForm  — formulario con validación y estados de envío│
 // │  3  ShoppingCart      — carrito de compras completo                 │
 // └──────────────────────────────────────────────────────────────────────┘
-const PASO = 1
+const PASO = 2
 
 export default function App() {
   const content =
