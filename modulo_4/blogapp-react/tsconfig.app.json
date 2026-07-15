@@ -17,8 +17,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
 
+    /* Silence deprecated baseUrl warning for TS 6.x */
+    "ignoreDeprecations": "6.0",
+
     /* Alias @ */
-    "baseUrl": ".",
+   
     "paths": {
       "@/*": ["./src/*"]
     },
