@@ -1,19 +1,18 @@
 import { Module } from '@nestjs/common';
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { MongooseModule } from '@nestjs/mongoose';
 import { CursosController } from './cursos.controller';
 import { CursosService } from './cursos.service';
-import { Curso, CursoSchema } from './schema/curso.schema';
-import { Contenido, ContenidoSchema } from './schema/contenido.schema';
+import { Curso } from './curso.entity'; // TypeORM Entity
+import { Curso as CursoMongo, CursoSchema } from './schema/curso.schema'; // Mongoose Schema
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
-      { name: Curso.name, schema: CursoSchema },
-      { name: Contenido.name, schema: ContenidoSchema },
-    ]),
+    TypeOrmModule.forFeature([Curso]),
+    MongooseModule.forFeature([{ name: CursoMongo.name, schema: CursoSchema }]),
   ],
   controllers: [CursosController],
   providers: [CursosService],
-  exports: [CursosService], 
+  exports: [CursosService],
 })
 export class CursosModule {}

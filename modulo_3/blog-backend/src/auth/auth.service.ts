@@ -36,4 +36,10 @@ export class AuthService {
     const payload = { id: user.id, email: user.username };
     return this.jwtService.sign(payload);
   }
+
+    // src/auth/auth.service.ts (agregar dentro de la clase AuthService)
+  async loginWithUser(user: User): Promise<string> {
+    const payload = { id: user.id, username: user.username };
+    return this.jwtService.sign(payload);
+  }
 }

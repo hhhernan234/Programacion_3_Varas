@@ -12,9 +12,18 @@ export class CursosService {
     private readonly cursosRepository: Repository<Curso>,
   ) {}
 
-  async create(dto: CreateCursoDto): Promise<Curso | null> {
+ async create(dto: CreateCursoDto): Promise<Curso | null> {
     try {
-      const curso = this.cursosRepository.create(dto);
+      // Separamos el instructor y el resto de propiedades
+      const { instructor, ...rest } = dto;
+      
+      // Creamos la entidad pasando el resto de campos 
+      // y asignando el instructor según corresponda
+      const curso = this.cursosRepository.create({
+        ...rest,
+        instructor: instructor as any, // 'as any' o el tipo que corresponda a tu relación
+      });
+      
       return await this.cursosRepository.save(curso);
     } catch (err) {
       console.error('Error creating curso:', err);

@@ -19,4 +19,10 @@ export class User {
 
   @Column({ nullable: true })
   profile?: string;
+
+  @Column({ type: 'varchar', nullable: true })
+  googleId: string | undefined | null; // Agrega | null aquí
+
+  @Column({ type: 'varchar', nullable: true }) // <--- Asegúrate de incluir 'type: varchar'
+  avatarUrl?: string | null;
 }
