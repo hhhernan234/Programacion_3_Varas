@@ -1,39 +1,33 @@
-// src/App.tsx
+// src/App_mp.tsx
 
-/*import PrimeSieve        from './components/PrimeSieve'
-import FilteredCatalog   from './components/FilteredCatalog'
-import OrderMetrics      from './components/OrderMetrics'
-import MultiTagFilter    from './components/MultiTagFilter'
-import MemoizedList from './components/MemoizedList'
-import ModalDemo from './components/ModalDemo'*/
-import PostList from './components/Post'
-import ThemeSelector from './components/ThemeSelector'
-/*import PaginatedFetch from './components/PaginatedFetch'
-*/
+import PrimeSieve_mp        from './components/PrimeSieve_mp'
+import FilteredCatalog_mp   from './components/FilteredCatalog_mp'
+
+import MemoizedList_mp from './components/MemoizedList_mp'
+import ModalDemo_mp from './components/ModalDemo_mp'
+import PostList_mp from './components/Post_mp'
+import ThemeSelector_mp from './components/ThemeSelector_mp'
+import PaginatedFetch_mp from './components/PaginatedFetch_mp'
+
 // ┌──────────────────────────────────────────────────────────────────────┐
 // │  Cambia PASO y guarda (Ctrl+S) para navegar entre componentes.      │
-// │  1  PrimeSieve       — useMemo para cálculo costoso (criba primos)  │
-// │  2  FilteredCatalog  — dos useMemo encadenados: filtrar → ordenar   │
+// │  Sistema de Control de Nóminas                                       │
+// │  1  PrimeSieve_mp       — useMemo para cálculo costoso (criba primos)  │
+// │  2  FilteredCatalog_mp  — dos useMemo encadenados: filtrar → ordenar   │
 // │  3  OrderMetrics     — múltiples useMemo derivados de un filtro     │
 // │  4  MultiTagFilter   — filtro AND por tags con conteos memoizados   │
 // └──────────────────────────────────────────────────────────────────────┘
-const PASO = 13
+const PASO = 2
 
-export default function App() {
+export default function App_mp() {
   const content =
-    /*PASO === 1 ? <PrimeSieve /> :
-    PASO === 2 ? <FilteredCatalog /> :
-    PASO === 3 ? <OrderMetrics /> :
-    PASO === 4 ? <MultiTagFilter /> :
-    PASO === 5 ? <MemoizedList /> :
-    PASO === 6 ? <SearchWithFetch /> :
-    PASO === 7 ? <FilterTable /> :
-    PASO === 8 ? <PaginatedFetch /> :
-    PASO === 9 ? <ModalDemo /> :
-    PASO === 10 ? <QuantitySelector /> :
-    PASO === 11 ? <ThemeSelector /> :
-    PASO === 12 ? <LiveSearch /> :*/
-    PASO === 13 ? <PostList /> :
+    PASO === 1 ? <PrimeSieve_mp /> :
+    PASO === 2 ? <FilteredCatalog_mp /> :
+    PASO === 3 ? <MemoizedList_mp /> :
+    PASO === 4 ? <PaginatedFetch_mp /> :
+    PASO === 5 ? <ModalDemo_mp /> :
+    PASO === 6 ? <ThemeSelector_mp /> :
+    PASO === 7 ? <PostList_mp /> :
     /*PASO === 14 ? <ResponsiveLayout /> :
     PASO === 15 ? <CodeBlock code={EXAMPLE_CODE} language="tsx" /> :*/
     <p style={{ color: '#e00' }}>Paso {PASO}: crea el componente primero</p>

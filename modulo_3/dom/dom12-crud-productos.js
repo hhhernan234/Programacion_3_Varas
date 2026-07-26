@@ -61,6 +61,9 @@ function agregarProducto() {
     limpiarFormulario();
 }
 
+const agregarBtn = document.getElementById('btn_agregar');
+agregarBtn.addEventListener('click', agregarProducto);
+
 function limpiarFormulario() {
     document.getElementById('nombre').value = '';
     document.getElementById('descripcion').value = '';
@@ -68,8 +71,6 @@ function limpiarFormulario() {
 }
 
 
-const agregarBtn = document.getElementById('btn_agregar');
-agregarBtn.addEventListener('click', agregarProducto);
 
 
 let idEditar = null;
@@ -88,12 +89,9 @@ function editarProducto(id) {
 }
 
 function actualizarProducto() {
-    const nombreInput = document
-        .getElementById('nombre').value.trim();
-    const descripcionInput = document
-        .getElementById('descripcion').value.trim();
-    const precioInput = document
-        .getElementById('precio').value.trim();
+    const nombreInput = document.getElementById('nombre').value.trim();
+    const descripcionInput = document.getElementById('descripcion').value.trim();
+    const precioInput = document.getElementById('precio').value.trim();
 
     if (!nombreInput || !descripcionInput 
         || !precioInput) {
