@@ -1,0 +1,70 @@
+:root {
+  --color-primario:    #27ae60; /* Verde Éxito - Sistema Varas */
+  --color-secundario:  #2c3e50; /* Azul Medianoche */
+  --color-acento:      #2980b9; /* Azul Corporativo */
+  --color-fondo:       #f4f7f6; 
+  --color-texto:       #2d3436; 
+}
+
+h1 {
+  color: var(--color-primario);
+  font-family: 'Inter', sans-serif;
+}
+
+.parrafo {
+  line-height: 1.6;
+}
+
+.titulo-producto {
+  line-height: 1.2;
+  font-weight: bold;
+}
+
+.descripcion-larga {
+  line-height: 1.8;
+}
+
+.logo-tienda {
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.etiqueta-categoria {
+  letter-spacing: 0.05em;
+  word-spacing: 0.1em;
+}
+
+.banner-oferta     { text-align: center; color: var(--color-acento); }
+.descripcion       { text-align: left; }
+.precio-total      { text-align: right; font-weight: bold; }
+.texto-justificado { text-align: justify; }
+
+.none-text-decoration {
+  text-decoration: none;
+}
+
+.precio-antes {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.link-destacado {
+  text-decoration: underline;
+  text-decoration-color: #e63946;
+  text-underline-offset: 4px;
+  cursor: pointer;
+}
+
+.subtitulo        { text-transform: capitalize; }
+.codigo-producto  { text-transform: lowercase; }
+
+.producto-nombre {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px; /* Aumentado un poco para legibilidad */
+}
+
+.alerta { color: #e74c3c; } /* Rojo para errores/alertas */
+.exito  { color: var(--color-primario); }
+.info   { color: var(--color-acento); }

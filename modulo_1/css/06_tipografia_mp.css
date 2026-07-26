@@ -1,0 +1,62 @@
+/* Estilos Tipográficos - Sistema Varas */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px;
+    background-color: #f4f7f6;
+}
+
+/* Los valores monetarios en fuente monoespaciada para alinear decimales */
+.precio-producto {
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: #27ae60; /* Verde para el neto positivo */
+}
+
+/* Fuente elegante para títulos de reportes finales */
+.titulos {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 2.5rem;
+    margin-top: 40px;
+    color: #34495e;
+}
+
+/* Fuente Inter para la interfaz de usuario y estados */
+.internacional {
+    font-family: 'Inter', sans-serif;
+    color: #2980b9; /* Azul profesional */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+}
+
+/* Pesos visuales para jerarquía de información */
+.titulo-seccion { 
+    font-weight: 700; 
+    font-size: 1.2rem;
+    margin: 15px 0;
+}
+
+.descripcion { 
+    font-weight: 400; 
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.nota-legal { 
+    font-weight: 300; 
+    font-size: 0.8rem;
+    margin-top: 50px;
+    border-top: 1px solid #ccc;
+    padding-top: 10px;
+    font-style: italic;
+}
+
+/* Sueldo base tachado para mostrar comparativa tras descuentos */
+.precio-original {
+    font-style: italic;
+    text-decoration: line-through;
+    color: #e74c3c; /* Rojo suave para indicar el valor antes de deducciones */
+    font-size: 1rem;
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema Varas — Control de Nómina</title>
+    
+    <link rel="stylesheet" href="04_display_mp.css">
+</head>
+<body>
+    <h1 style="color: #2c3e50">Panel de Control de Pagos</h1>
+    
+    <div class="banner-oferta">📅 Recordatorio: El cierre de nómina es en 2 días</div>
+    
+    <div class="etiqueta-nuevo">✔ Empleado Activo</div>
+    
+    <button class="btn-carrito">📄 Generar Reporte PDF</button>
+
+    <button onclick="toggleMenu()">Menú de Gestión</button>
+    
+    <div id="menu" class="menu-movil">
+        <ul>
+            <li><a href="#">Lista de Colaboradores</a></li>
+            <li><a href="#">Cálculo de Horas Extra</a></li>
+            <li><a href="#">Historial de Pagos</a></li>
+        </ul>
+    </div>
+
+    <script>
+        function toggleMenu(){
+            const menu = document.getElementById('menu')
+            menu.classList.toggle('activo')
+        }
+    </script>
+</body>
+</html>

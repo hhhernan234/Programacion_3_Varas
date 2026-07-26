@@ -1,0 +1,83 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  margin: 25px;
+}
+
+h2 {
+  margin-top: 35px;
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* NAVBAR ADMINISTRATIVA */
+.navbar-links {
+  display: flex;
+  gap: 2.5rem;
+  background: #2c3e50; /* Azul medianoche */
+  padding: 15px;
+  border-radius: 4px;
+}
+
+.navbar-links a {
+  color: #ecf0f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar-links a:hover {
+  color: #3498db;
+}
+
+/* FILTROS DE DEPARTAMENTOS */
+.filtros {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los botones bajen si no caben */
+  gap: 0.8rem 1.2rem;
+  margin: 20px 0;
+}
+
+.filtros button {
+  padding: 8px 16px;
+  background-color: #ffffff;
+  border: 1px solid #bdc3c7;
+  border-radius: 20px;
+  cursor: pointer;
+  color: #34495e;
+  transition: all 0.3s ease;
+}
+
+.filtros button:hover {
+  background-color: #34495e;
+  color: white;
+}
+
+/* GRID DE COLABORADORES */
+.productos-grid {
+  display: flex;
+  flex-wrap: wrap; /* Fundamental para el diseño responsive */
+  gap: 1.5rem;
+  align-content: center; /* Alinea las filas de items al centro del contenedor */
+  height: 450px; 
+  background: #ecf0f1;
+  padding: 20px;
+  border: 2px dashed #bdc3c7;
+  border-radius: 8px;
+}
+
+.producto {
+  background: #2980b9; /* Azul institucional */
+  color: white;
+  padding: 25px 15px;
+  width: 140px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Variaciones de align-content según tu formato original */
+.start   { align-content: flex-start; }
+.center  { align-content: center; }
+.between { align-content: space-between; }
+.stretch { align-content: stretch; }

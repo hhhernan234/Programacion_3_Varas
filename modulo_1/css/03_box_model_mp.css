@@ -1,0 +1,39 @@
+/* Con border-box: el width incluye padding y border */
+* {
+    box-sizing: border-box;
+}
+
+.item-card {
+    width: 280px;
+    padding: 5px;
+    border: 2px solid #9b8e43;
+    border-radius: 8px;
+    margin: 16px;
+    background-color: #2c535f;
+    /* Un valor: los 4 lados */
+    padding: 20px;
+    /* Dos valores: vertical | horizontal */
+    padding: 10px 20px;
+    /* Tres valores: top | horizontal | bottom */
+    padding: 10px 20px 15px;
+    /* Cuatro valores: top | right | bottom | left */
+    padding: 15px 25px;
+}
+
+.producto1-card {
+    width: 280px;
+    padding: 20px;
+    border: 2px solid #c61414;
+    border-radius: 8px;
+    margin: 16px;
+    background-color: #2bcfa9;
+}
+
+.producto2-card {
+    width: 280px;
+    padding: 20px;
+    border: 2px solid #af4a4a;
+    border-radius: 8px;
+    margin: 16px;
+    background-color: #231717;
+}

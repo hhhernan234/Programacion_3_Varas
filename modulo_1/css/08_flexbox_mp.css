@@ -1,0 +1,56 @@
+/* Contenedor principal de tarjetas */
+.productos-grid {
+    display: flex; /* activa Flexbox */
+    gap: 15px;     /* espacio opcional entre tarjetas */
+    background-color: #f4f7f6;
+    padding: 10px;
+}
+
+/* Control de dirección del flujo de información */
+.contenedor {
+    display: flex;
+    /* He dejado las opciones comentadas según tu formato original */
+    flex-direction: column;         /* ↓ Utilizado para el resumen de pagos vertical */
+    /* 
+    flex-direction: row;            
+    flex-direction: row-reverse;    
+    flex-direction: column-reverse; 
+    */
+    gap: 10px;
+}
+
+/* Navbar: items organizados en fila */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    background-color: #2c3e50;
+    padding: 15px;
+    color: white;
+}
+
+/* Tarjeta individual adaptada a nómina */
+.producto-card {
+    display: flex;
+    flex-direction: column; /* Apila el contenido de la tarjeta verticalmente */
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    min-width: 150px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+/* Contenedor de alineación (Mantenido según tu formato) */
+.contenedor-justify {
+    display: flex;
+    /* Propiedades de distribución de espacio */
+    justify-content: space-between; /* Espacio distribuido profesionalmente */
+    /* 
+    justify-content: flex-start;
+    justify-content: flex-end;
+    justify-content: center;
+    justify-content: space-around;
+    justify-content: space-evenly;
+    */
+}

@@ -1,0 +1,93 @@
+<!-- modulo2-texto.html -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Guía de HTML5 — Blog de Tecnología</title>
+</head>
+<body>
+
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentación - Sistema de Nómina</title>
+</head>
+<body>
+
+  <h1>Manual del Sistema de Nómina Pro</h1>
+  <p><small>Actualizado el 10 de abril de 2026 por <strong>Hernán Varas</strong></small></p>
+
+  <hr>
+
+  <h2>¿Qué es este Sistema?</h2>
+  <p>
+    El software de <abbr title="Control de Nómina y Talento Humano">CNTH</abbr> es una herramienta desarrollada para 
+    la gestión contable. Cumple con los estándares del <abbr title="Servicio de Rentas Internas">SRI</abbr> y el 
+    <abbr title="Instituto Ecuatoriano de Seguridad Social">IESS</abbr>, siendo actualmente <em>el estándar</em> 
+    para el manejo de sueldos en el proyecto de <strong>Programación III</strong>.
+  </p>
+
+  <blockquote cite="https://www.trabajo.gob.ec/">
+    <p>La nómina no es solo un pago; es el registro legal que garantiza la transparencia entre 
+    el empleador y el colaborador, protegiendo los derechos de ambas partes.</p>
+  </blockquote>
+
+  <h2>Componentes Técnicos del Proyecto</h2>
+  <ul>
+    <li>Base de Datos <strong>Relacional</strong>: Tablas de <code>empleados</code> y <code>roles</code></li>
+    <li>Backend en <strong>Python</strong>: Lógica de cálculos y validaciones</li>
+    <li>Frontend <strong>Semántico</strong>: Uso de etiquetas <code>&lt;main&gt;</code> y <code>&lt;section&gt;</code></li>
+    <li>Persistencia de Sesión: Uso de <strong>tokens</strong> y <strong>cookies</strong></li>
+  </ul>
+
+  <h2>Flujo de Trabajo del Contador</h2>
+  <ol>
+    <li>Verificar que el empleado tenga un contrato activo</li>
+    <li>Ingresar las horas extras del periodo actual</li>
+    <li>Ejecutar el proceso de cálculo de retenciones</li>
+    <li>Generar el archivo plano para transferencia bancaria</li>
+    <li>Emitir el comprobante de pago con firma electrónica</li>
+  </ol>
+
+  <h2>Evolución del Registro Laboral</h2>
+
+  <h3>Método Manual vs Automatizado</h3>
+  <p>
+    Antiguamente se usaban <del>libros contables físicos</del> para el registro.
+    Hoy usamos <ins>bases de datos PostgreSQL</ins> para garantizar la integridad de la información.
+  </p>
+
+  <h2>Fórmula de Liquidación</h2>
+  <p>
+    Total a Recibir = Salario<sup>Bruto</sup> + Horas<sup>Extra</sup> 
+    - Deducciones<sup>Ley</sup>
+  </p>
+
+  <hr>
+
+  <h2>Snippet de Código del Cálculo (Python)</h2>
+  <pre><code>
+    def calcular_neto(sueldo, aportes):
+        # Fórmula: Neto = Sueldo - (Sueldo * 0.0945)
+        return sueldo - aportes
+  </code></pre>
+
+  <p>Paso 1: Validación &rarr; Paso 2: Cálculo &rarr; Paso 3: Depósito</p>
+
+  <hr>
+
+  <address>
+    <small>
+      Desarrollado por Hernán Varas &mdash; 
+      <a href="mailto:hvaras@ejemplo.edu">hvaras@ejemplo.edu</a><br>
+      &copy; 2026 Sistema Varas Software. Todos los derechos reservados.
+    </small>
+  </address>
+
+</body>
+</html>
+
+</body>
+</html>
